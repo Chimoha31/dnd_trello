@@ -1,11 +1,15 @@
 import React from 'react'
 
-function Tasks() {
+export default function Tasks({inputText, taskList}) {
+  // console.log(...taskList);
   return (
     <div>
-      
+    {/* {taskList.map((task) => (
+      <div>{task.text}</div>   
+      ))} */}
     </div>
   )
 }
 
-export default Tasks
+
+

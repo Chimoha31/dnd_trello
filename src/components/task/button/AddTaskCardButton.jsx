@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 function AddTaskCardButton() {
   return (
@@ -9,4 +9,5 @@ function AddTaskCardButton() {
 }
 
 export default AddTaskCardButton
+
 

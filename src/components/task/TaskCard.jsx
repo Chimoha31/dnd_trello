@@ -6,7 +6,7 @@ import Tasks from "./Tasks";
 
 function TaskCard() {
   const [inputText, setInputText] = useState("");
-  const [taskList, setTaskList] = useState("");
+  const [taskList, setTaskList] = useState([]);
 
   return (
     <div className="taskCard">

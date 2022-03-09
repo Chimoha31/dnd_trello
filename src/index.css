@@ -57,3 +57,16 @@ header {
   border: none;
   outline: none;
 }
+
+.taskBox {
+  border: 1px solid red;
+}
+
+.taskText {
+  border: 1px solid red;
+  
+}
+.taskTrashButton {
+  border: 1px solid blue;
+  display: inline-block;
+}

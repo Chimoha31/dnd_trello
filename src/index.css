@@ -19,12 +19,7 @@ header {
 }
 
 .app {
-  background: url("./images/sea.jpg");
+  background: url("./images/Mtfuji.jpg");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: ("貴様の画像.jpg");
-  background-color: rgba(255, 255, 255, 0.2);
-  background-blend-mode: lighten;
   height: 100vh;
 }

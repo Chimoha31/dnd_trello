@@ -11,10 +11,16 @@ function TaskCards() {
     },
   ]);
 
+  const handleDragEnd = (result) => {
+    console.log(result.source.index);
+    console.log(result.destination.index);
+    const remove = taskCardsList.splice(result.souce.index, 1);
+    taskCardsList.splice(result.destination.index, 0, remove[0]);
+  }
+
   return (
-    <DragDropContext>
+    <DragDropContext onDragEnd={handleDragEnd}>
       <Droppable droppableId="droppable" direction="horizontal">
-        {/* 横方向にdndしたい時はdirectionを設定 */}
         {(provided) => (
           <div
             className="taskCardsArea"
@@ -30,7 +36,7 @@ function TaskCards() {
                 taskCard={taskCard}
               />
             ))}
-            <provided.placeholder />
+            {provided.placeholder}
             <AddTaskCardButton
               taskCardsList={taskCardsList}
               setTaskCardsList={setTaskCardsList}
@@ -40,6 +46,6 @@ function TaskCards() {
       </Droppable>
     </DragDropContext>
   );
-}
+};
 
 export default TaskCards;

@@ -19,7 +19,7 @@ function TaskCard() {
         taskList={taskList}
       />
       {/* ↓taskAddInputで入力した文字をenterした時にTasksに反映させる為、 taskAddInput.jsxからinputTextとtaskListを渡す*/}
-      <Tasks inputText={inputText} taskList={taskList} />
+      <Tasks inputText={inputText} taskList={taskList} setTaskList={setTaskList} />
     </div>
   );
 }

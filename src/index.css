@@ -58,15 +58,25 @@ header {
   outline: none;
 }
 
+/* Task.jsx */
 .taskBox {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 0px;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px rgb(75,75,75);
 }
 
-.taskText {
-  border: 1px solid red;
-  
+.taskTitle {
+ margin-left: 12px;
 }
+
 .taskTrashButton {
-  border: 1px solid blue;
-  display: inline-block;
+  margin-right: 9px;
+  border: none;
+  cursor: pointer;
 }

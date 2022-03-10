@@ -7,7 +7,7 @@
 
 h1 {
   font-size: 45px;
-  color: aliceblue;
+  color: alicebl;
   font-weight: 600;
   text-shadow: 2px 2px 2px black;
 }
@@ -47,12 +47,11 @@ header {
   cursor: pointer;
   transition: all 0.1s ease;
 }
+
 .addTaskCardButton:hover {
   box-shadow: none;
   transform: translate(3px, 3px);
 }
-
-
 
 /* TaskCard.jsx */
 .taskCard {
@@ -61,6 +60,11 @@ header {
   margin: 10px 1%;
   background-color: rgb(228, 228, 228);
   border-radius: 5px;
+}
+
+.taskCardTitleAndTaskCardButtonArea {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* TaskCardTitle.jsx */
@@ -103,11 +107,20 @@ header {
 }
 
 .taskTitle {
- margin-left: 12px;
+  margin-left: 12px;
 }
 
 .taskTrashButton {
   margin-right: 9px;
   border: none;
   cursor: pointer;
+}
+
+/* TaskCardDeleteButton.jsx */
+.taskCardDeleteButton {
+  border: none;
+  background-color: rgb(228, 228, 228);
+  cursor: pointer;
+  font-size: 16px;
+  color: rgb(158, 46, 46);
 }

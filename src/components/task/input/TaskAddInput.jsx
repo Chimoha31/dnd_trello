@@ -5,10 +5,17 @@ function TaskAddInput({ inputText, setInputText, taskList, setTaskList }) {
     e.preventDefault();
     // カードを追加する時は、formでenterが押された時。以下、カードを追加していく。
     // taskListの配列の中にどんどんinputTextを格納していきたい。(...taskListは以前のtaskListの内容)
-    if(inputText === "") {
+    if (inputText === "") {
       return;
     }
-    setTaskList([...taskList, { id: taskList.length, text: inputText }]);
+    setTaskList([
+      ...taskList,
+      {
+        id: taskList.length,
+        draggableId: `task-${taskList.length}`,
+        text: inputText,
+      },
+    ]);
     setInputText("");
   };
 

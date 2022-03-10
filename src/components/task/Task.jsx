@@ -1,7 +1,7 @@
 import React from "react";
 import { Draggable } from "react-beautiful-dnd";
 
-function Task({ task, taskList, setTaskList }) {
+function Task({ task, taskList, setTaskList, index }) {
   const handleDelete = (id) => {
     // filter()メソッドは合致する全ての配列からなる新しい配列を生成！
     // だからわざわざremove()とかdeleteという形で考えなくても結果的に消したい配列の要素を消す事ができる！
@@ -9,7 +9,7 @@ function Task({ task, taskList, setTaskList }) {
   };
 
   return (
-    <Draggable draggableId={task.draggableId} index={task.id}>
+    <Draggable index={index} draggableId={task.draggableId}>
       {(provided) => (
         <div
           className="taskBox"

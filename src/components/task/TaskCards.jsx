@@ -1,15 +1,24 @@
-import React from 'react';
-import TaskCard from './TaskCard';
-import AddTaskCardButton from './button/AddTaskCardButton';
-
+import React, { useState } from "react";
+import TaskCard from "./TaskCard";
+import AddTaskCardButton from "./button/AddTaskCardButton";
 
 function TaskCards() {
+  const [taskCardsList, setTaskCardsList] = useState([{
+    id: 0,
+    draggableId: "item0",
+  }]);
+
   return (
-    <div>
-      <TaskCard />
-      <AddTaskCardButton />
+    <div className="taskCardsArea">
+      {taskCardsList.map((taskCard) => (
+        <TaskCard key={taskCard.id} />
+      ))}
+      <AddTaskCardButton
+        taskCardsList={taskCardsList}
+        setTaskCardsList={setTaskCardsList}
+      />
     </div>
-  )
+  );
 }
 
 export default TaskCards;

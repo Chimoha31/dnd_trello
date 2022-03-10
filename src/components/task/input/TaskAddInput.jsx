@@ -1,7 +1,9 @@
 import React from "react";
+import { v4 as uuid } from 'uuid';
 
 function TaskAddInput({ inputText, setInputText, taskList, setTaskList }) {
   const handleSubmit = (e) => {
+    const taskId = uuid();
     e.preventDefault();
     // カードを追加する時は、formでenterが押された時。以下、カードを追加していく。
     // taskListの配列の中にどんどんinputTextを格納していきたい。(...taskListは以前のtaskListの内容)
@@ -11,8 +13,8 @@ function TaskAddInput({ inputText, setInputText, taskList, setTaskList }) {
     setTaskList([
       ...taskList,
       {
-        id: taskList.length,
-        draggableId: `task-${taskList.length}`,
+        id: taskId, //lengthでidを設定するとbugの原因。邪道。uuidでユニークなidを持たせること。
+        draggableId: `task-${taskId}`, //lengthでidを設定するとbugの原因。邪道。uuidでユニークなidを持たせる。
         text: inputText,
       },
     ]);
